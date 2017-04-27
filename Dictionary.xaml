@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Цей_день">
+    <Style x:Key="Panel_Btn" TargetType="Button">
+        <Setter Property="Control.FontFamily" Value="Segoe MDL2 Assets"/>
+        <Setter Property="Control.Margin" Value="5"></Setter>
+    </Style>
+    
+</ResourceDictionary>

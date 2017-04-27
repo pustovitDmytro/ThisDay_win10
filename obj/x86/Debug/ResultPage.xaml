@@ -1,0 +1,43 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Цей_день.ResultPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Цей_день"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:VisibilityConverter x:Key="VisConv"></local:VisibilityConverter>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:ConnectionId='2' x:Name="panel" Orientation="Vertical" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" ScrollViewer.VerticalScrollMode="Enabled">
+            <Button x:ConnectionId='5' x:Name="Home" Style="{StaticResource Panel_Btn}" Content="&#xE8F5;"                   />
+            <Button Style="{StaticResource Panel_Btn}" Content="&#xE11A;"/>
+            <Button Style="{StaticResource Panel_Btn}" Content="&#xE787;" />
+            <Button x:ConnectionId='6' x:Name="Pause" Style="{StaticResource Panel_Btn}" Content="&#xE769;"                                                                                                                                            />
+            <Button x:ConnectionId='7' x:Name="Play" Style="{StaticResource Panel_Btn}" Content="&#xE768;"                                                                                                                                             />
+            <Button x:ConnectionId='8' x:Name="Share" Style="{StaticResource Panel_Btn}" Content="&#xE72D;"/>
+            <Button x:ConnectionId='9' x:Name="Settings" Style="{StaticResource Panel_Btn}" Content="&#xE713;"                       />
+        </StackPanel>
+            
+        <Button x:ConnectionId='3'  x:Name="Menu_Button" Grid.Row="0" Margin="40,5,40,5" Grid.ColumnSpan="2" Content="Меню" HorizontalAlignment="Stretch"                          ></Button>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="1">
+            <ListView x:ConnectionId='4'                             Margin="10" HorizontalAlignment="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Page>
+
